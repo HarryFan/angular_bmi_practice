@@ -1,0 +1,9 @@
+<form (submit)="calculateBMI($event)">
+  <div> <label for="height">Height (cm):</label> <!-- 將Height (m)改為Height (cm) --> <input type="number" id="height"
+      [(ngModel)]="height" name="height"> </div>
+  <div> <label for="weight">Weight (kg):</label> <input type="number" id="weight" [(ngModel)]="weight" name="weight">
+  </div>
+  <button type="submit">Calculate BMI</button>
+
+</form>
+<p *ngIf="bmi !== null">Your BMI is {{ bmi.toFixed(2) }}</p>
